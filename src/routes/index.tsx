@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:image:type",
-        content: "image/jpg",
+        content: "image/jpeg",
       },
       {
         property: "og:image:width",
