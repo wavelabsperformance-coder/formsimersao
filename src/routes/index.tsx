@@ -32,6 +32,30 @@ export const Route = createFileRoute("/")({
         content:
           "Sua Imersão que Transforma começa aqui. Não existem respostas certas, bonitas ou esperadas.",
       },
+      {
+        property: "og:image",
+        content: "https://formularioimersao.vercel.app/og-image.jpg",
+      },
+      {
+        property: "og:image:secure_url",
+        content: "https://formularioimersao.vercel.app/og-image.jpg",
+      },
+      {
+        property: "og:image:type",
+        content: "image/jpg",
+      },
+      {
+        property: "og:image:width",
+        content: "600",
+      },
+      {
+        property: "og:image:height",
+        content: "600",
+      },
+      {
+        property: "og:type",
+        content: "website",
+      },
     ],
     links: [
       {
