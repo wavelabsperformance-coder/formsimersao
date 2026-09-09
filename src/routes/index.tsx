@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Sua Imersão que Transforma começa aqui. Não existem respostas certas, bonitas ou esperadas.",
+          "Sua Imersão que Transforma começa aqui. Um diagnóstico inicial para preparar uma experiência individual antes do nosso encontro.",
       },
       {
         property: "og:title",
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:image:type",
-        content: "image/jpg",
+        content: "image/jpeg",
       },
       {
         property: "og:image:width",
@@ -61,19 +61,13 @@ export const Route = createFileRoute("/")({
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/apple-touch-icon.png",
+        href: "/og-image.jpg",
       },
       {
         rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/favicon-32x32.png",
-      },
-      {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "/favicon-16x16.png",
+        type: "image/jpeg",
+        sizes: "180x180",
+        href: "/og-image.jpg",
       },
       {
         rel: "manifest",
@@ -400,7 +394,7 @@ function ResumeBar({
 
 function Opening({ onStart }: { onStart: () => void }) {
   return (
-    <section className="veil grid min-h-screen lg:grid-cols-[1.05fr_1fr]">
+    <section className="veil grid min-h-screen lg:grid-cols-[1fr_1fr]">
       <div className="order-2 flex flex-col justify-between px-6 pt-12 pb-20 sm:px-12 lg:order-1 lg:px-20 lg:py-16">
         <header className="flex items-center justify-between">
           <Wordmark />
