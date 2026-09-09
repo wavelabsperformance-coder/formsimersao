@@ -81,10 +81,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "O primeiro movimento da sua Imersão que Transforma: um diagnóstico inicial para preparar uma experiência individual.",
+          "Sua Imersão que Transforma começa aqui. Não existem respostas certas, bonitas ou esperadas.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Imersão que Transforma" },
+      {
+        property: "og:title",
+        content: "Imersão que Transforma — Diagnóstico Inicial",
+      },
+      {
+        property: "og:description",
+        content:
+          "Sua Imersão que Transforma começa aqui. Não existem respostas certas, bonitas ou esperadas.",
+      },
+      {
+        property: "og:image",
+        content: "https://formularioimersao.vercel.app/og-image.jpg",
+      },
+      {
+        property: "og:image:secure_url",
+        content: "https://formularioimersao.vercel.app/og-image.jpg",
+      },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "600" },
+      { property: "og:image:height", content: "600" },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content: "https://formularioimersao.vercel.app/og-image.jpg",
+      },
     ],
     links: [
       {
@@ -101,7 +126,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/og-image.jpg" },
+      { rel: "icon", href: "/og-image.jpg", type: "image/jpeg" },
     ],
   }),
 
@@ -113,7 +139,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
@@ -130,7 +156,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
   );
