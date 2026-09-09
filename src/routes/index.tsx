@@ -394,7 +394,7 @@ function ResumeBar({
 
 function Opening({ onStart }: { onStart: () => void }) {
   return (
-    <section className="veil grid min-h-screen lg:grid-cols-[1.05fr_1fr]">
+    <section className="veil grid min-h-screen lg:grid-cols-[1fr_1fr]">
       <div className="order-2 flex flex-col justify-between px-6 pt-12 pb-20 sm:px-12 lg:order-1 lg:px-20 lg:py-16">
         <header className="flex items-center justify-between">
           <Wordmark />
@@ -561,4 +561,4 @@ function Closing({ onSend }: { onSend: () => void }) {
       </div>
     </section>
   );
-}
+}''
